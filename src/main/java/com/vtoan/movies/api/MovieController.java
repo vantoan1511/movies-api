@@ -18,8 +18,13 @@ import java.util.Optional;
 @RequestMapping("/api/v1/movies")
 public class MovieController {
 
-    @Autowired
     private IMovieService movieService;
+
+    @Autowired
+
+    public MovieController(IMovieService movieService) {
+        this.movieService = movieService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies() {
