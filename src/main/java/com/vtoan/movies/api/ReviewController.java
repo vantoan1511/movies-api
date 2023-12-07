@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/reviews")
 public class ReviewController {
-    private IReviewService reviewService;
+    private final IReviewService reviewService;
 
     @Autowired
     public ReviewController(IReviewService reviewService) {

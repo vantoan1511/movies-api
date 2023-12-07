@@ -18,7 +18,7 @@ import java.util.Optional;
 @RequestMapping("/api/v1/movies")
 public class MovieController {
 
-    private IMovieService movieService;
+    private final IMovieService movieService;
 
     @Autowired
 
